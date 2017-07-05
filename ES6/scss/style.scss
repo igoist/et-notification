@@ -1,0 +1,114 @@
+$colorSuccess: #7adf17; // #7CFC00;
+$colorWarning: #f5312e;
+$sizeHeight: 36px; 
+$sizeWidth: 160px;
+$top: 49px;
+$right: 80px;
+
+.et-notification {
+    position: fixed;
+    top: $top;
+    right: $right;
+    padding: 8px 16px;
+    width: $sizeWidth;
+    height: $sizeHeight;
+    line-height: $sizeHeight/2;
+    background: #fff;
+    border-radius: 4px;
+    z-index: 1000;
+    transition: transform cubic-bezier(.6,.04,.98,.34) 0.36s, opacity cubic-bezier(.6,.04,.98,.34) 0.3s;
+    box-shadow: 0 2px 8px rgba(0,0,0,.2);
+
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Helvetica,PingFang SC,Hiragino Sans GB,Microsoft YaHei,SimSun,sans-serif;
+
+    &.success {
+        color: $colorSuccess;
+    }
+
+    &.warning {
+        color: $colorWarning;
+    }
+
+    &.et-notification-fadeOut {
+        transform: translateY(-$top);
+        opacity: 0;
+    }
+
+    &:hover {
+        background: #c0c0c0;
+    }
+
+    animation: et-notification-fadeIn 0.6s 1;
+}
+
+@keyframes et-notification-fadeIn {
+    0% {
+        transform: translateX($sizeWidth + $right + 20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+
+// @-webkit-keyframes antMoveUpOut {
+//   0% {
+//     -webkit-transform-origin: 0 0;
+//     transform-origin: 0 0;
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+
+//   to {
+//     -webkit-transform-origin: 0 0;
+//     transform-origin: 0 0;
+//     -webkit-transform: translateY(-100%);
+//     transform: translateY(-100%);
+//     opacity: 0;
+//   }
+// }
+
+// @keyframes antMoveUpOut {
+//   0% {
+//     -webkit-transform-origin: 0 0;
+//     transform-origin: 0 0;
+//     -webkit-transform: translateY(0);
+//     transform: translateY(0);
+//     opacity: 1;
+//   }
+
+//   to {
+//     -webkit-transform-origin: 0 0;
+//     transform-origin: 0 0;
+//     -webkit-transform: translateY(-100%);
+//     transform: translateY(-100%);
+//     opacity: 0;
+//   }
+// }
+
+
+// .move-up-appear,.move-up-enter {
+//   opacity: 0;
+//   -webkit-animation-timing-function: cubic-bezier(.08,.82,.17,1);
+//   animation-timing-function: cubic-bezier(.08,.82,.17,1)
+// }
+
+// .move-up-leave {
+//   -webkit-animation-timing-function: cubic-bezier(.6,.04,.98,.34);
+//   animation-timing-function: cubic-bezier(.6,.04,.98,.34)
+// }
+
+// .move-left-appear,.move-left-enter {
+//   opacity: 0;
+//   -webkit-animation-timing-function: cubic-bezier(.08,.82,.17,1);
+//   animation-timing-function: cubic-bezier(.08,.82,.17,1)
+// }
+
+// .move-left-leave {
+//   -webkit-animation-timing-function: cubic-bezier(.6,.04,.98,.34);
+//   animation-timing-function: cubic-bezier(.6,.04,.98,.34)
+// }

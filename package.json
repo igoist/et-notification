@@ -1,0 +1,11 @@
+{
+  "name": "ET-Notification",
+  "version": "1.0.0",
+  "description": "component, notification, igoist, egoist",
+  "main": "",
+  "scripts": {
+    "test": ""
+  },
+  "author": "igoist",
+  "license": "ISC"
+}
